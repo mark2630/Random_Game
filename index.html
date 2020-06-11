@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="index.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-lg-center">
+        <div class="col-sm-12 col-lg-6">
+          <div class="card m-2">
+            <div class="card-body">
+              <h5 class="card-title">Guess the number</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Rules:</h6>
+              <p class="card-text">
+                Choose the number between 1-6. After you choose your number
+                computer will guess his number and also will generate "Winning
+                Number". If you guess the number you will get one point, same
+                thing for computer. Who gets 3 right guess wins!
+              </p>
+            </div>
+          </div>
+          <div class="select-number">
+            <div class="alert alert-primary m-2 select-number-box" role="alert">
+              Select your number:
+              <span
+                class="badge badge-dark player-button"
+                onclick="playerNumber(1)"
+                >1</span
+              >
+              <span
+                class="badge badge-dark player-button"
+                onclick="playerNumber(2)"
+                >2</span
+              >
+              <span
+                class="badge badge-dark player-button"
+                onclick="playerNumber(3)"
+                >3</span
+              >
+              <span
+                class="badge badge-dark player-button"
+                onclick="playerNumber(4)"
+                >4</span
+              >
+              <span
+                class="badge badge-dark player-button"
+                onclick="playerNumber(5)"
+                >5</span
+              >
+              <span
+                class="badge badge-dark player-button"
+                onclick="playerNumber(6)"
+                >6</span
+              >
+            </div>
+          </div>
+          <div class="result m-2"></div>
+          <div class="text-center">
+            <button
+              type="button"
+              id="continue-button"
+              class="btn btn-primary"
+              onclick="nextRoll()"
+            >
+              Next
+            </button>
+
+            <button
+              type="button"
+              id="play-button"
+              class="btn btn-primary"
+              onclick="startGame()"
+              disabled
+            >
+              Select
+            </button>
+
+            <button
+              type="button"
+              id="same-num-button"
+              class="btn btn-primary"
+              onclick="sameNum()"
+            >
+              Previous Number
+            </button>
+
+            <button
+              type="button"
+              id="reset-button"
+              class="btn btn-primary"
+              onclick="resetGame()"
+            >
+              Play again?
+            </button>
+          </div>
+          <div class="badge badge-dark" id="result"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+body {
+  background-color: lightslategray;
+}
+
+.player-button {
+  cursor: pointer;
+}
