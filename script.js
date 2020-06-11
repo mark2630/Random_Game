@@ -135,6 +135,7 @@ function playerNumber(result) {
 
 function startGame() {
   $(".select-number").toggle();
+  $("#same-num-button").hide();
   game();
 }
 
